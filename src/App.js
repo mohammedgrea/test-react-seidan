@@ -1,11 +1,15 @@
-import "./app.css";
+import React from "react";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
+import Footer from "./components/Footer";
 
-function App() {
+import "./app.css";
+export default function () {
   return (
-    <div className="App">
-      <h1>Test setup File</h1>
+    <div className="app">
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
   );
 }
-
-export default App;

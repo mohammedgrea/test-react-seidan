@@ -1,0 +1,8 @@
+.home-container {
+  height: calc(100vh - 200px);
+  padding: 20px;
+}
+.home-container p {
+  max-width: 500px;
+  line-height: 1.5;
+}
