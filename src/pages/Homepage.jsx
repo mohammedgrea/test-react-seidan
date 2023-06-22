@@ -40,7 +40,9 @@ export default function Homepage() {
         <Box position="relative">
           <IntroTitle>SIEDAN</IntroTitle>
           <SubLabel>
-            <Typography variant="h4">Test Rect</Typography>
+            <Typography variant="h4" p="10px">
+              Test Rect
+            </Typography>
           </SubLabel>
         </Box>
         <Box maxWidth="600px" textAlign="center" color="white">
