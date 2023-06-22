@@ -1,11 +1,28 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-.active {
-  color: red;
+html,
+body,
+.app {
+  width: 100%;
+  box-sizing: content-box;
+  font-family: Helvetica, sans-serif;
+}
+:root {
+  --main-color: #2aa794;
+  --main-shadow: 0 17px 23px -9px rgba(51, 51, 51, 0.25);
+}
+a.active {
+  color: var(--main-color);
 }
 
 a {
   text-decoration: none;
+}
+li {
+  display: inline-block;
+  margin-left: 15px;
+  font-weight: bold;
 }
