@@ -35,7 +35,7 @@ export default function Homepage() {
         justifyContent="center"
         flexDirection="column"
         alignItems="center"
-        height="100vh"
+        height="100dvh"
       >
         <Box position="relative">
           <IntroTitle>SIEDAN</IntroTitle>

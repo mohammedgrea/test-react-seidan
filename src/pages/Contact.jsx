@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 
 const ImageContainer = styled("div")(({ theme }) => ({
   width: "50%",
-  height: "100%",
+  height: "100dvh",
   backgroundImage: "url(images/background-image.jpg)",
   backgroundPosition: "center",
   backgroundSize: "cover",

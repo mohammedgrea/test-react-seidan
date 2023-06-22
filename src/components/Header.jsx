@@ -23,6 +23,12 @@ const HeaderContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     width: "90%",
     padding: "10px 10px",
+    "& nav ul li": {
+      marginLeft: "5px",
+    },
+    "& h1": {
+      fontSize: "20px",
+    },
   },
   [theme.breakpoints.up("md")]: { width: "90%" },
   [theme.breakpoints.up("lg")]: { width: "80%" },
