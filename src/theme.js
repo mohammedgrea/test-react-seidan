@@ -51,6 +51,7 @@ const settingsColor = (mode) => {
           root: {
             color: colors.linkColor,
             textDecoration: "none",
+            fontSize: "12px",
             "&:hover": { color: "#2aa794" },
           },
         },

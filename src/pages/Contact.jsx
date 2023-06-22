@@ -1,13 +1,64 @@
 import { Box, Button } from "@mui/material";
 import { TextField } from "@mui/material";
 import { useTheme } from "@emotion/react";
+import { styled } from "@mui/material/styles";
 
+const ImageContainer = styled("div")(({ theme }) => ({
+  width: "50%",
+  height: "100%",
+  backgroundImage: "url(images/background-image.jpg)",
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
+  [theme.breakpoints.up("md")]: { width: "30%" },
+  [theme.breakpoints.up("lg")]: { width: "50%" },
+}));
+
+const FormContainer = styled("div")(({ theme }) => ({
+  mt: 1,
+  height: "100%",
+  display: "flex",
+  justifyContent: "center",
+  flexDirection: "column",
+  alignItems: "center",
+
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+    margin: "10px",
+  },
+  [theme.breakpoints.up("md")]: {
+    width: "70%",
+  },
+  [theme.breakpoints.up("lg")]: {
+    width: "50%",
+  },
+}));
+const Form = styled("form")(({ theme }) => ({
+  variant: "form",
+  width: "50%",
+  display: "flex",
+  flexDirection: "column",
+  gap: "20px",
+
+  [theme.breakpoints.down("md")]: {
+    width: "100%",
+  },
+  [theme.breakpoints.up("md")]: {
+    width: "70%",
+  },
+  [theme.breakpoints.up("lg")]: {
+    width: "50%",
+  },
+}));
 export default function Contact() {
   const theme = useTheme();
 
   return (
     <Box width="100%" height="100vh" display="flex">
-      <Box
+      <ImageContainer
         width="50%"
         height="100%"
         sx={{
@@ -15,25 +66,9 @@ export default function Contact() {
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
-      ></Box>
-      <Box
-        component="form"
-        noValidate
-        sx={{ mt: 1 }}
-        width="50%"
-        height="100%"
-        display="flex"
-        justifyContent="center"
-        flexDirection="column"
-        alignItems="center"
-      >
-        <Box
-          variant="form"
-          width="50%"
-          display="flex"
-          flexDirection="column"
-          gap="20px"
-        >
+      ></ImageContainer>
+      <FormContainer>
+        <Form>
           <TextField
             id="username"
             label="Username"
@@ -72,8 +107,8 @@ export default function Contact() {
           >
             Submit
           </Button>
-        </Box>
-      </Box>
+        </Form>
+      </FormContainer>
     </Box>
   );
 }

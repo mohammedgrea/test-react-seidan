@@ -2,6 +2,25 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import BoxInfo from "../components/BoxInfo";
+import { styled } from "@mui/material/styles";
+const IntroTitle = styled("Typography")(({ theme }) => ({
+  color: "white",
+  [theme.breakpoints.down("md")]: {
+    fontSize: "35px",
+  },
+  [theme.breakpoints.up("md")]: { fontSize: "60px" },
+}));
+const SubLabel = styled("Typography")(({ theme }) => ({
+  position: "absolute",
+  right: "-170px",
+  top: "-20px",
+  p: "5px",
+  borderRadius: "8px",
+  background: theme.palette.primary.main,
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
+}));
 export default function Homepage() {
   const theme = useTheme();
   return (
@@ -19,26 +38,16 @@ export default function Homepage() {
         height="100vh"
       >
         <Box position="relative">
-          <Typography variant="h1" color="white">
-            SIEDAN
-          </Typography>
-          <Box
-            position="absolute"
-            right="-170px"
-            top="-20px"
-            p={1}
-            borderRadius={2}
-            bgcolor={theme.palette.primary.main}
-          >
+          <IntroTitle>SIEDAN</IntroTitle>
+          <SubLabel>
             <Typography variant="h4">Test Rect</Typography>
-          </Box>
+          </SubLabel>
         </Box>
-        <Box width="600px" textAlign="center" color="white">
+        <Box maxWidth="600px" textAlign="center" color="white">
           <p>
             It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters,
+            the readable content of a page when looking at its layout. The
+            point...
           </p>
         </Box>
       </Box>
